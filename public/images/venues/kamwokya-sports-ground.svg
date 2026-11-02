@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4fc3f7"/>
+      <stop offset="100%" style="stop-color:#b3e5fc"/>
+    </linearGradient>
+    <linearGradient id="pitch" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   style="stop-color:#2e7d32"/>
+      <stop offset="25%"  style="stop-color:#388e3c"/>
+      <stop offset="50%"  style="stop-color:#2e7d32"/>
+      <stop offset="75%"  style="stop-color:#388e3c"/>
+      <stop offset="100%" style="stop-color:#2e7d32"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#sky)"/>
+
+  <!-- Clouds -->
+  <ellipse cx="160" cy="75" rx="75" ry="28" fill="white" opacity="0.85"/>
+  <ellipse cx="210" cy="63" rx="58" ry="22" fill="white" opacity="0.9"/>
+  <ellipse cx="580" cy="85" rx="85" ry="30" fill="white" opacity="0.85"/>
+
+  <!-- Athletics track (oval) -->
+  <ellipse cx="400" cy="390" rx="330" ry="100" fill="#c0843c"/>
+  <ellipse cx="400" cy="390" rx="300" ry="78" fill="url(#pitch)"/>
+
+  <!-- Track lane lines -->
+  <ellipse cx="400" cy="390" rx="315" ry="88" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+  <ellipse cx="400" cy="390" rx="300" ry="78" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+  <ellipse cx="400" cy="390" rx="285" ry="68" fill="none" stroke="white" stroke-width="2" opacity="0.4"/>
+  <ellipse cx="400" cy="390" rx="270" ry="58" fill="none" stroke="white" stroke-width="2" opacity="0.4"/>
+
+  <!-- Pitch markings -->
+  <rect x="168" y="350" width="464" height="80" fill="none" stroke="white" stroke-width="2.5" opacity="0.7"/>
+  <line x1="400" y1="350" x2="400" y2="430" stroke="white" stroke-width="2.5" opacity="0.7"/>
+  <circle cx="400" cy="390" r="40" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+  <circle cx="400" cy="390" r="4" fill="white" opacity="0.8"/>
+  <!-- Penalty arcs -->
+  <rect x="168" y="362" width="100" height="56" fill="none" stroke="white" stroke-width="2" opacity="0.5"/>
+  <rect x="532" y="362" width="100" height="56" fill="none" stroke="white" stroke-width="2" opacity="0.5"/>
+
+  <!-- Goal posts -->
+  <rect x="145" y="368" width="8" height="44" fill="#eee"/>
+  <rect x="143" y="368" width="35" height="5" fill="#eee"/>
+  <rect x="178" y="368" width="6" height="44" fill="#eee"/>
+  <rect x="647" y="368" width="8" height="44" fill="#eee"/>
+  <rect x="645" y="368" width="35" height="5" fill="#eee"/>
+  <rect x="650" y="368" width="6" height="44" fill="#eee"/>
+
+  <!-- Main stand -->
+  <polygon points="100,340 700,340 680,200 120,200" fill="#b0bec5"/>
+  <polygon points="100,340 700,340 700,330 100,330" fill="#90a4ae"/>
+  <!-- Roof of stand -->
+  <polygon points="115,200 685,200 665,185 135,185" fill="#546e7a"/>
+
+  <!-- Seat rows -->
+  <line x1="120" y1="220" x2="680" y2="220" stroke="#78909c" stroke-width="2"/>
+  <line x1="120" y1="245" x2="680" y2="245" stroke="#78909c" stroke-width="2"/>
+  <line x1="120" y1="270" x2="680" y2="270" stroke="#78909c" stroke-width="2"/>
+  <line x1="120" y1="295" x2="680" y2="295" stroke="#78909c" stroke-width="2"/>
+  <line x1="120" y1="320" x2="680" y2="320" stroke="#78909c" stroke-width="2"/>
+
+  <!-- Seat colors - crowd -->
+  <rect x="130" y="212" width="18" height="8" rx="2" fill="#e53935"/>
+  <rect x="155" y="212" width="18" height="8" rx="2" fill="#1e88e5"/>
+  <rect x="180" y="212" width="18" height="8" rx="2" fill="#e53935"/>
+  <rect x="205" y="212" width="18" height="8" rx="2" fill="#43a047"/>
+  <rect x="230" y="212" width="18" height="8" rx="2" fill="#fdd835"/>
+  <rect x="255" y="212" width="18" height="8" rx="2" fill="#e53935"/>
+  <rect x="280" y="212" width="18" height="8" rx="2" fill="#1e88e5"/>
+  <rect x="305" y="212" width="18" height="8" rx="2" fill="#e53935"/>
+  <rect x="330" y="212" width="18" height="8" rx="2" fill="#43a047"/>
+  <rect x="355" y="212" width="18" height="8" rx="2" fill="#fdd835"/>
+  <rect x="380" y="212" width="18" height="8" rx="2" fill="#e53935"/>
+  <rect x="405" y="212" width="18" height="8" rx="2" fill="#1e88e5"/>
+  <rect x="430" y="212" width="18" height="8" rx="2" fill="#e53935"/>
+  <rect x="455" y="212" width="18" height="8" rx="2" fill="#43a047"/>
+  <rect x="480" y="212" width="18" height="8" rx="2" fill="#fdd835"/>
+  <rect x="505" y="212" width="18" height="8" rx="2" fill="#e53935"/>
+  <rect x="530" y="212" width="18" height="8" rx="2" fill="#1e88e5"/>
+  <rect x="555" y="212" width="18" height="8" rx="2" fill="#e53935"/>
+  <rect x="580" y="212" width="18" height="8" rx="2" fill="#43a047"/>
+  <rect x="605" y="212" width="18" height="8" rx="2" fill="#fdd835"/>
+  <rect x="630" y="212" width="18" height="8" rx="2" fill="#e53935"/>
+  <rect x="655" y="212" width="18" height="8" rx="2" fill="#1e88e5"/>
+
+  <!-- Score board -->
+  <rect x="310" y="140" width="180" height="50" fill="#212121" rx="5"/>
+  <text x="400" y="160" text-anchor="middle" font-family="monospace" font-size="11" fill="#00e676">KAMWOKYA SPORTS GROUND</text>
+  <text x="360" y="180" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#ff5252">HOME 2</text>
+  <text x="440" y="180" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#40c4ff">AWAY 1</text>
+
+  <!-- Floodlights -->
+  <rect x="108" y="175" width="10" height="30" fill="#666"/>
+  <rect x="100" y="170" width="26" height="8" fill="#888" rx="2"/>
+  <rect x="682" y="175" width="10" height="30" fill="#666"/>
+  <rect x="674" y="170" width="26" height="8" fill="#888" rx="2"/>
+
+  <!-- Football on pitch -->
+  <circle cx="400" cy="390" r="10" fill="white" stroke="#333" stroke-width="1.5"/>
+  <polygon points="400,382 406,387 404,395 396,395 394,387" fill="#333" opacity="0.6"/>
+
+  <!-- Label -->
+  <rect x="0" y="460" width="800" height="40" fill="rgba(0,0,0,0.55)"/>
+  <text x="400" y="486" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="white">Kamwokya Sports Ground · Off Kira Road, Kampala</text>
+</svg>

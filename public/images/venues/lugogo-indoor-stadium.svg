@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a5c;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2d6a9f;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="grass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d8a3e;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a5c28;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c0392b;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#96281b;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8e0d0;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#d4c9b0;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="500" fill="url(#sky)"/>
+
+  <!-- Stars/lights -->
+  <circle cx="100" cy="50" r="2" fill="white" opacity="0.6"/>
+  <circle cx="250" cy="30" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="600" cy="45" r="2" fill="white" opacity="0.6"/>
+  <circle cx="720" cy="25" r="1.5" fill="white" opacity="0.5"/>
+
+  <!-- Ground -->
+  <rect x="0" y="370" width="800" height="130" fill="#1a2e1a"/>
+
+  <!-- Floodlight towers -->
+  <rect x="80" y="150" width="12" height="220" fill="#555"/>
+  <rect x="60" y="145" width="52" height="12" fill="#777" rx="3"/>
+  <ellipse cx="86" cy="145" rx="26" ry="6" fill="#999"/>
+  <!-- Light beams -->
+  <polygon points="86,157 40,370 132,370" fill="yellow" opacity="0.08"/>
+
+  <rect x="708" y="150" width="12" height="220" fill="#555"/>
+  <rect x="688" y="145" width="52" height="12" fill="#777" rx="3"/>
+  <ellipse cx="714" cy="145" rx="26" ry="6" fill="#999"/>
+  <polygon points="714,157 668,370 760,370" fill="yellow" opacity="0.08"/>
+
+  <!-- Main stadium body -->
+  <!-- Curved roof -->
+  <ellipse cx="400" cy="210" rx="310" ry="40" fill="url(#roof)"/>
+  <rect x="90" y="210" width="620" height="20" fill="#96281b"/>
+
+  <!-- Main wall -->
+  <rect x="95" y="230" width="610" height="140" fill="url(#wall)"/>
+
+  <!-- Stadium arched windows row -->
+  <rect x="120" y="245" width="50" height="70" rx="25" fill="#2d6a9f" opacity="0.8"/>
+  <rect x="190" y="245" width="50" height="70" rx="25" fill="#2d6a9f" opacity="0.8"/>
+  <rect x="260" y="245" width="50" height="70" rx="25" fill="#2d6a9f" opacity="0.8"/>
+  <rect x="330" y="245" width="50" height="70" rx="25" fill="#2d6a9f" opacity="0.8"/>
+  <rect x="400" y="245" width="50" height="70" rx="25" fill="#2d6a9f" opacity="0.8"/>
+  <rect x="470" y="245" width="50" height="70" rx="25" fill="#2d6a9f" opacity="0.8"/>
+  <rect x="540" y="245" width="50" height="70" rx="25" fill="#2d6a9f" opacity="0.8"/>
+  <rect x="610" y="245" width="50" height="70" rx="25" fill="#2d6a9f" opacity="0.8"/>
+
+  <!-- Entrance gate -->
+  <rect x="340" y="295" width="120" height="75" fill="#1a3a5c"/>
+  <rect x="355" y="305" width="40" height="65" rx="20" fill="#4a8ab5"/>
+  <rect x="405" y="305" width="40" height="65" rx="20" fill="#4a8ab5"/>
+  <!-- Gate arch top -->
+  <ellipse cx="400" cy="310" rx="65" ry="20" fill="#1a3a5c"/>
+
+  <!-- Pitch/grass -->
+  <ellipse cx="400" cy="420" rx="300" ry="40" fill="url(#grass)"/>
+  <!-- Pitch markings -->
+  <ellipse cx="400" cy="420" rx="180" ry="25" fill="none" stroke="#4aaa5a" stroke-width="2" opacity="0.6"/>
+  <line x1="400" y1="395" x2="400" y2="445" stroke="#4aaa5a" stroke-width="2" opacity="0.6"/>
+  <circle cx="400" cy="420" r="20" fill="none" stroke="#4aaa5a" stroke-width="2" opacity="0.6"/>
+
+  <!-- KCCA banner on stadium -->
+  <rect x="320" y="215" width="160" height="28" fill="#c0392b" rx="3"/>
+  <text x="400" y="234" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="white">LUGOGO INDOOR STADIUM</text>
+
+  <!-- Parking cars -->
+  <rect x="140" y="380" width="40" height="22" rx="5" fill="#3498db"/>
+  <rect x="190" y="380" width="40" height="22" rx="5" fill="#e74c3c"/>
+  <rect x="560" y="380" width="40" height="22" rx="5" fill="#2ecc71"/>
+  <rect x="610" y="380" width="40" height="22" rx="5" fill="#e67e22"/>
+
+  <!-- Label -->
+  <rect x="0" y="460" width="800" height="40" fill="rgba(0,0,0,0.5)"/>
+  <text x="400" y="486" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="white">Lugogo Indoor Stadium · Lugogo, Kampala</text>
+</svg>
