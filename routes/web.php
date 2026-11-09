@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ProfileController;
@@ -48,4 +49,15 @@ Route::prefix('account')->name('profile.')->middleware('auth')->group(function (
     Route::put('/update',          [ProfileController::class, 'update'])->name('update');
     Route::put('/change-password', [ProfileController::class, 'changePassword'])->name('password');
     Route::delete('/delete',       [ProfileController::class, 'deleteAccount'])->name('delete');
+});
+
+// ── Admin (auth + admin role required) ────────────────────────────────────────
+Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(function () {
+    Route::get('/dashboard',                     [AdminController::class, 'dashboard'])->name('dashboard');
+    Route::get('/bookings',                      [AdminController::class, 'bookings'])->name('bookings');
+    Route::post('/bookings/{reference}/confirm', [AdminController::class, 'confirmBooking'])->name('bookings.confirm');
+    Route::post('/bookings/{reference}/cancel',  [AdminController::class, 'cancelBooking'])->name('bookings.cancel');
+    Route::get('/venues',                        [AdminController::class, 'venues'])->name('venues');
+    Route::post('/venues/{id}/toggle',           [AdminController::class, 'toggleVenue'])->name('venues.toggle');
+    Route::get('/users',                         [AdminController::class, 'users'])->name('users');
 });

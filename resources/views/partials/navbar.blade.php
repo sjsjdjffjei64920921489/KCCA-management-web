@@ -28,8 +28,7 @@
             {{-- Auth buttons --}}
             <div class="flex items-center gap-3">
                 @guest
-                    <a href="{{ route('login') }}" class="hidden sm:inline-flex inline-flex items-center gap-1 px-4 py-2 rounded-lg font-semibold text-xs bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 transition">Login</a>
-                    <a href="{{ route('register') }}" class="inline-flex items-center gap-1 px-4 py-2 rounded-lg font-semibold text-xs bg-green-700 hover:bg-green-800 text-white transition">Register</a>
+                    <a href="{{ route('login') }}" class="inline-flex items-center gap-1 px-4 py-2 rounded-lg font-semibold text-xs bg-green-700 hover:bg-green-800 text-white transition">Login</a>
                 @endguest
 
                 @auth
@@ -37,6 +36,12 @@
                        class="{{ request()->routeIs('bookings.dashboard') ? 'text-green-700 font-semibold' : 'text-gray-600 hover:text-green-700' }} hidden sm:inline text-sm font-medium transition">
                         My Bookings
                     </a>
+                    @if(Auth::user()->isAdmin())
+                    <a href="{{ route('admin.dashboard') }}"
+                       class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 text-xs font-bold rounded-lg bg-purple-100 text-purple-700 hover:bg-purple-200 transition">
+                        🛡️ Admin
+                    </a>
+                    @endif
                     <div class="relative group">
                         <button class="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-green-700 transition focus:outline-none">
                             <div class="w-8 h-8 bg-green-700 rounded-full flex items-center justify-center text-white text-xs font-bold">
@@ -50,12 +55,18 @@
                                 <p class="text-xs font-bold text-gray-900 truncate">{{ Auth::user()->name }}</p>
                                 <p class="text-xs text-gray-500 truncate">{{ Auth::user()->email }}</p>
                             </div>
+                            @if(Auth::user()->isAdmin())
+                            <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-purple-700 hover:bg-purple-50">🛡️ Admin Dashboard</a>
+                            @endif
                             <a href="{{ route('bookings.dashboard') }}" class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">📂 My Bookings</a>
                             <a href="{{ route('profile.show') }}"       class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">👤 My Account</a>
                             <a href="{{ route('profile.show') }}#edit-profile" class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">✏️ Edit Profile</a>
                             <a href="{{ route('profile.show') }}#password"     class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">🔒 Change Password</a>
-                            <div class="border-t border-gray-100 mt-1"></div>
-                            <form method="POST" action="{{ route('logout') }}">
+                            @if(Auth::user()->isAdmin())
+                            <div class="border-t border-gray-100 my-1"></div>
+                            <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-2 px-4 py-2 text-sm text-purple-700 font-semibold hover:bg-purple-50">👑 Admin Panel</a>
+                            @endif
+                            <div class="border-t border-gray-100 mt-1"></div>                            <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <button type="submit" class="w-full flex items-center gap-2 px-4 py-2 text-sm text-red-600 hover:bg-red-50">🚪 Sign Out</button>
                             </form>
@@ -80,14 +91,16 @@
             <a href="{{ route('venues.index', ['location' => 'Kabalagala']) }}" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg">Kabalagala</a>
             @auth
                 <a href="{{ route('bookings.dashboard') }}" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg">📂 My Bookings</a>
+                @if(Auth::user()->isAdmin())
+                    <a href="{{ route('admin.dashboard') }}" class="block px-4 py-2 text-sm font-semibold text-purple-700 hover:bg-purple-50 rounded-lg">🛡️ Admin Dashboard</a>
+                @endif
                 <a href="{{ route('profile.show') }}"       class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg">👤 My Account</a>
                 <form method="POST" action="{{ route('logout') }}" class="px-4">
                     @csrf
                     <button type="submit" class="text-sm text-red-600 font-medium py-2">🚪 Sign Out</button>
                 </form>
             @else
-                <a href="{{ route('login') }}" class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg">Login</a>
-                <a href="{{ route('register') }}" class="block px-4 py-2 text-sm font-semibold text-green-700 hover:bg-green-50 rounded-lg">Register</a>
+                <a href="{{ route('login') }}" class="block px-4 py-2 text-sm font-semibold text-green-700 hover:bg-green-50 rounded-lg">Login</a>
             @endauth
         </div>
     </div>
